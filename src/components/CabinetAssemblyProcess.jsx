@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { StepControllerContext } from "../../context/StepControllerContext";
 
 export default function CabinetAssemblyProcess() {
-    const {currentStep} = useContext(StepControllerContext);
+    const { currentStep } = useContext(StepControllerContext);
 
     const assemblyProcess = [
         {
@@ -24,7 +24,7 @@ export default function CabinetAssemblyProcess() {
         }
     ];
 
-    const progressPercentage = ( (currentStep + 1) / 20) * 100;
+    const progressPercentage = ((currentStep + 1) / 20) * 100;
 
     return (
         <div className="relative bg-white rounded-2xl px-4 py-6 mt-8 mx-56 overflow-hidden">
@@ -32,12 +32,12 @@ export default function CabinetAssemblyProcess() {
                 <p className="font-bold text-[#2D313D] text-2xl">Cabinet assembly</p>
                 {
                     assemblyProcess.map((item) => (
-                        <div 
-                            key={item.step} 
+                        <div
+                            key={item.step}
                             className={`flex space-x-2 py-2 px-3 justify-center items-center border-[1px] border-gray-100 rounded-full shadow-md 
-                                ${item.step < currentStep ? 'bg-white' : 
-                                  item.step === currentStep ? 'bg-[#30303c]' : 
-                                  'bg-white'}`}
+                                ${item.step < currentStep ? 'bg-white' :
+                                    item.step === currentStep ? 'bg-[#30303c]' :
+                                        'bg-white'}`}
                         >
                             {item.step < currentStep ? (
                                 <Image src="/check-icon.png" alt="iconCheck" width={26} height={26} />

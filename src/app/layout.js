@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <StepControllerProvider>
-          <body className={inter.className}>{children}</body>
+        <body className={inter.className}>{children}</body>
       </StepControllerProvider>
     </html>
   );
