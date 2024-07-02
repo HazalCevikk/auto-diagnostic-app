@@ -1,26 +1,30 @@
 "use client"
 import Image from "next/image"
-import { useState } from "react";
+import { useContext } from "react";
+import { StepControllerContext } from "../../context/StepControllerContext";
 
 export default function CabinetAssemblyProcess() {
-    const [currentStep, setCurrentStep] = useState(1);
+    const {currentStep} = useContext(StepControllerContext);
 
     const assemblyProcess = [
         {
-            step: 1,
+            step: 0,
+            number: 1,
             text: "Cabinet arrangement"
         },
         {
-            step: 2,
+            step: 1,
+            number: 2,
             text: "Assembly & test shelves"
         },
         {
-            step: 3,
+            step: 2,
+            number: 3,
             text: "Summary"
         }
     ];
 
-    const progressPercentage = (currentStep / 4) * 100;
+    const progressPercentage = ( (currentStep + 1) / 20) * 100;
 
     return (
         <div className="relative bg-white rounded-2xl px-4 py-6 mt-8 mx-56 overflow-hidden">
@@ -40,7 +44,7 @@ export default function CabinetAssemblyProcess() {
                             ) : (
                                 <p className={`flex items-center justify-center w-7 h-7 rounded-full font-semibold 
                                     ${item.step === currentStep ? 'bg-white text-[#30303c]' : 'bg-[#ACABB1] text-white'}`}>
-                                    {item.step}
+                                    {item.number}
                                 </p>
                             )}
                             <p className={`text-sm font-light 
