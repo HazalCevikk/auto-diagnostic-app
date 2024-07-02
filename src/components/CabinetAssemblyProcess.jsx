@@ -20,10 +20,10 @@ export default function CabinetAssemblyProcess() {
         }
     ];
 
-    const progressPercentage = (currentStep / 20) * 100;
+    const progressPercentage = (currentStep / 4) * 100;
 
     return (
-        <div className="relative bg-white rounded-2xl px-4 py-6 mt-8 mx-36 overflow-hidden">
+        <div className="relative bg-white rounded-2xl px-4 py-6 mt-8 mx-56 overflow-hidden">
             <div className="flex items-center space-x-4">
                 <p className="font-bold text-[#2D313D] text-2xl">Cabinet assembly</p>
                 {
