@@ -1,9 +1,12 @@
-import Image from "next/image";
+
+import CabinetAssemblyProcess from "@/components/CabinetAssemblyProcess";
+import Header from "@/components/Header";
 
 export default function Home() {
   return (
-    <div>
-      
-    </div>
+    <>
+      <Header user={"Richard Clarkson"}></Header>
+      <CabinetAssemblyProcess/>
+    </>
   );
 }
