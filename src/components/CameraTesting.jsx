@@ -27,7 +27,7 @@ export default function CameraTesting() {
                                 Shelf 10 - camera test
                             </DialogTitle>
                             <p>Is the captured image OK?</p>
-                            <Image src={"/image.png"} alt="blueScreen" width={400} height={300} />
+                            <Image src={"/image.png"} alt="view" width={400} height={300} />
                             <div className="w-full flex space-x-2 ">
                                 <Button
                                     className="rounded-full px-6 py-3 font-semibold text-red-600 text-sm mt-4 border-[1px] border-red-600 w-full"

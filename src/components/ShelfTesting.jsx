@@ -3,7 +3,7 @@ import { useContext } from "react"
 import { StepControllerContext } from "../../context/StepControllerContext"
 
 export default function ShelfTesting() {
-    const { setCurrentStep, setIsOpen } = useContext(StepControllerContext)
+    const { setCurrentStep, setIsOpen, selectedCabinet } = useContext(StepControllerContext)
 
     return (
         <div className="mx-56 mt-4">
@@ -23,10 +23,10 @@ export default function ShelfTesting() {
                 </div>
 
                 <div className="mr-36">
-                    <Image src={"/zoom-6-shelves.png"} alt="detailCabinet" width={350} height={650} />
+                    <Image src={selectedCabinet.image} alt="detailCabinet" width={350} height={650} />
                 </div>
             </div>
-            <div className="flex cursor-pointer border-[1px] border-[#30303c] p-2 w-56 items-center justify-center space-x-4 rounded-full" onClick={() => setCurrentStep(0)}>
+            <div className="flex cursor-pointer border-[1px] border-[#30303c] p-1 w-44 items-center justify-center space-x-2 rounded-full" onClick={() => setCurrentStep(0)}>
                 <Image src={"/left-chevron.png"} alt="previous page" width={16} height={16}></Image>
                 <p className="text-lg">Previous Page</p>
             </div>
