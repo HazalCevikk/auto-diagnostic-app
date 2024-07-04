@@ -7,6 +7,7 @@ const StepControllerProvider = ({ children }) => {
     const [currentStep, setCurrentStep] = useState(0)
     const [isOpen, setIsOpen] = useState(false)
     const [isCameraTesting, setIsCameraTesting] = useState(false)
+    const [selectedCabinet, setSelectedCabinet] = useState({ id: null, image: null })
 
 
     const values = {
@@ -16,6 +17,8 @@ const StepControllerProvider = ({ children }) => {
         setIsOpen,
         isCameraTesting,
         setIsCameraTesting,
+        selectedCabinet,
+        setSelectedCabinet,
     }
 
     return (
