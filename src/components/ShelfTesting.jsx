@@ -1,9 +1,10 @@
 import Image from "next/image"
 import { useContext } from "react"
 import { StepControllerContext } from "../../context/StepControllerContext"
+import PreviousButton from "./PreviousButton"
 
 export default function ShelfTesting() {
-    const { setCurrentStep, setIsOpen, selectedCabinet } = useContext(StepControllerContext)
+    const { setCurrentStep, selectedCabinet } = useContext(StepControllerContext)
 
     return (
         <div className="mx-56 mt-4">
@@ -19,17 +20,14 @@ export default function ShelfTesting() {
                     />
                     <p className="text-xs font-light text-[#ACABB1] mt-1">The default weight is 500gr. You can change to <br />
                         other weights.</p>
-                    <button className="bg-[#30303C] p-3 text-white text-sm w-1/2 absolute right-6 bottom-6 rounded-full" onClick={() => setIsOpen(true)}>CONTINUE</button>
+                    <button className="bg-[#30303C] p-3 text-white text-sm w-1/2 absolute right-6 bottom-6 rounded-full" onClick={() => setCurrentStep(2)}>CONTINUE</button>
                 </div>
 
                 <div className="mr-36">
                     <Image src={selectedCabinet.image} alt="detailCabinet" width={350} height={650} />
                 </div>
             </div>
-            <div className="flex cursor-pointer border-[1px] border-[#30303c] p-1 w-44 items-center justify-center space-x-2 rounded-full" onClick={() => setCurrentStep(0)}>
-                <Image src={"/left-chevron.png"} alt="previous page" width={16} height={16}></Image>
-                <p className="text-lg">Previous Page</p>
-            </div>
+            <PreviousButton stepValue={0} setCurrentStep={setCurrentStep} />
         </div>
     )
 }

@@ -2,6 +2,7 @@ import { useContext, useState, useEffect } from "react"
 import { StepControllerContext } from "../../context/StepControllerContext"
 import { Button, Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
 import Image from "next/image"
+import PrimaryButton from "./PrimaryButton"
 
 
 export default function InstallationModal() {
@@ -51,12 +52,11 @@ export default function InstallationModal() {
                 }
 
               </div>
-              <Button
-                className={`rounded-full px-6 py-3 font-semibold text-white text-sm mt-4 ${loading ? "bg-[#ACABB1]" : "bg-[#30303c]"}`}
+              <PrimaryButton
+                className={loading ? "bg-[#ACABB1] text-white" : "bg-[#30303c] text-white"}
+                text={"CONFIRM INSTALLATION"}
                 onClick={close}
-              >
-                CONFIRM INSTALLATION
-              </Button>
+                disabled={loading} />
 
             </DialogPanel>
           </div>
