@@ -1,6 +1,8 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import StepControllerProvider from "../../context/StepControllerContext";
+import { PrimeReactProvider } from 'primereact/api';
+import "primereact/resources/themes/lara-light-cyan/theme.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,9 +14,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <StepControllerProvider>
-        <body className={inter.className}>{children}</body>
-      </StepControllerProvider>
+      <PrimeReactProvider>
+        <StepControllerProvider>
+          <body className={inter.className}>{children}</body>
+        </StepControllerProvider>
+      </PrimeReactProvider>
     </html>
   );
 }

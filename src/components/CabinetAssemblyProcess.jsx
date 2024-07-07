@@ -13,12 +13,12 @@ export default function CabinetAssemblyProcess() {
             text: "Cabinet arrangement"
         },
         {
-            step: 1,
+            step: 2,
             number: 2,
             text: "Assembly & test shelves"
         },
         {
-            step: 2,
+            step: 3,
             number: 3,
             text: "Summary"
         }
@@ -56,7 +56,7 @@ export default function CabinetAssemblyProcess() {
                 }
             </div>
             <div className="absolute bottom-0 left-0 w-full h-1.5 bg-white rounded-2xl">
-                <div className="h-full bg-[#30303c]" style={{ width: `${progressPercentage}%` }}></div>
+                <div className="h-full bg-[#30303c] progress-bar" style={{ width: `${progressPercentage}%` }}></div>
             </div>
         </div>
     );

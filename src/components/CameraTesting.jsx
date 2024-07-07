@@ -1,7 +1,8 @@
 import { useContext } from "react"
 import { StepControllerContext } from "../../context/StepControllerContext"
-import { Button, Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
+import { Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
 import Image from "next/image"
+import PrimaryButton from "./PrimaryButton"
 
 
 export default function CameraTesting() {
@@ -29,20 +30,17 @@ export default function CameraTesting() {
                             <p>Is the captured image OK?</p>
                             <Image src={"/image.png"} alt="view" width={400} height={300} />
                             <div className="w-full flex space-x-2 ">
-                                <Button
-                                    className="rounded-full px-6 py-3 font-semibold text-red-600 text-sm mt-4 border-[1px] border-red-600 w-full"
+                                <PrimaryButton
+                                    className="border-[1px] border-red-600 text-red-600 w-full"
                                     onClick={close}
-                                >
-                                    REPORT
-                                </Button>
-                                <Button
-                                    className="rounded-full px-6 py-3 font-semibold text-white text-sm mt-4 bg-[#30303c] w-full"
+                                    text={"REPORT"}
+                                />
+                                <PrimaryButton
+                                    className="bg-[#30303c] text-white w-full"
                                     onClick={close}
-                                >
-                                    CONFIRM
-                                </Button>
+                                    text={"CONFIRM"}
+                                />
                             </div>
-
                         </DialogPanel>
                     </div>
                 </div>

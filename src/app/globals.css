@@ -6,17 +6,28 @@ body {
   background-color: #E6E6E8;
 }
 
-@keyframes slide-down {
+.progress-bar {
+  transition: width 0.5s ease-in-out;
+}
+
+@keyframes slide-up {
   0% {
-    transform: translateY(-100%);
+    transform: translateY(100%);
     opacity: 1;
   }
+
   100% {
     transform: translateY(0);
     opacity: 1;
   }
 }
 
-.animate-slide-down {
-  animation: slide-down 300ms ease-in-out;
+.animate-slide-up {
+  animation: slide-up 300ms ease-in-out;
+}
+
+.p-datatable-wrapper {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+
 }

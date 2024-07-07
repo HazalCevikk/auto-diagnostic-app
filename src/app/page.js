@@ -9,6 +9,7 @@ import ShelfTesting from "@/components/ShelfTesting";
 import InstallationModal from "@/components/InstallationModal";
 import CameraTesting from "@/components/CameraTesting";
 import MainContextAndMotion from "@/components/MainContextAndMotion";
+import TestingResults from "@/components/TestingResults";
 
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
   const component = {
     1: <CabinentArrangement />,
     2: <ShelfTesting />,
+    3: <TestingResults />,
   }
 
   return (
