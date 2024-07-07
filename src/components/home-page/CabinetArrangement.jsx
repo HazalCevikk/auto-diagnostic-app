@@ -25,12 +25,12 @@ export default function CabinentArrangement() {
 
     return (
         <div className="mx-56 my-6 flex flex-col space-y-6 justify-center items-center">
-            <p className="font-bold text-[#30303c] text-2xl">Cabinent Arrangement</p>
+            <p className="font-bold text-primary text-2xl">Cabinent Arrangement</p>
             <div className="flex flex-wrap gap-[20px] items-center">
                 {context.map((item) => (
                     <div key={item.id} onClick={() => handleClickCard(item)} className="relative group">
                         <Image src={item.img} alt={`cabinet-${item.id}`} width={275} height={275} />
-                        <p className="font-bold text-lg text-center text-[#30303c]">{item.text}</p>
+                        <p className="font-bold text-lg text-center text-primary">{item.text}</p>
                         {selectedCabinet.id === item.id && (
                             <div className="absolute top-0 w-[275px] h-[274px] rounded-2xl flex items-center justify-center bg-[#E6E6E8] bg-opacity-50 transition-opacity duration-1000 animate-slide-down">
                                 <Image src="/correct.png" alt="check" width={50} height={50} />

@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import StepControllerProvider from "../../context/StepControllerContext";
+import StepControllerProvider from "../context/StepControllerContext";
 import { PrimeReactProvider } from 'primereact/api';
 import "primereact/resources/themes/lara-light-cyan/theme.css";
 

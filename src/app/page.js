@@ -1,15 +1,15 @@
 "use client"
 import React, { useContext } from "react";
-import CabinentArrangement from "@/components/CabinetArrangement";
-import CabinetAssemblyProcess from "@/components/CabinetAssemblyProcess";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import { StepControllerContext } from "../../context/StepControllerContext";
-import ShelfTesting from "@/components/ShelfTesting";
-import InstallationModal from "@/components/InstallationModal";
-import CameraTesting from "@/components/CameraTesting";
-import MainContextAndMotion from "@/components/MainContextAndMotion";
-import TestingResults from "@/components/TestingResults";
+import CabinentArrangement from "@/components/home-page/CabinetArrangement";
+import CabinetAssemblyProcess from "@/components/home-page/CabinetAssemblyProcess";
+import Footer from "@/components/footer/Footer";
+import Header from "@/components/header/Header";
+import { StepControllerContext } from "../context/StepControllerContext";
+import ShelfTesting from "@/components/home-page/ShelfTesting";
+import InstallationModal from "@/components/modals/InstallationModal";
+import CameraTesting from "@/components/modals/CameraTesting";
+import MainContextAndMotion from "@/components/home-page/MainContextAndMotion";
+import TestingResults from "@/components/home-page/TestingResults";
 
 
 export default function Home() {

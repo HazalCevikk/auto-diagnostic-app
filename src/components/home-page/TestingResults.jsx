@@ -2,10 +2,9 @@ import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import { useContext } from "react"
 import { StepControllerContext } from "../../context/StepControllerContext"
-import Image from 'next/image';
 
-import CabinetsWithShelfButtons from './CabinetsWithShelfButtons';
-import PreviousButton from './PreviousButton';
+import CabinetsWithShelfButtons from "@/components/home-page/CabinetsWithShelfButtons"
+import PreviousButton from '../button/PreviousButton';
 
 export default function TestingResults() {
     const { selectedCabinet, setIsOpen, setCurrentStep } = useContext(StepControllerContext)
@@ -48,7 +47,7 @@ export default function TestingResults() {
 
     return (
         <div className="mx-56 mt-4">
-            <p className="font-bold text-[#30303c] mb-4 text-xl">Shelf installation and testing</p>
+            <p className="font-bold text-primary mb-4 text-xl">Shelf installation and testing</p>
             <div className="flex justify-between items-start">
                 <div className="bg-white rounded-xl flex flex-col space-y-4 p-5 relative w-1/2 ">
                     <p className='font-bold'>Shelf 10 - Testing results</p>
@@ -71,7 +70,7 @@ export default function TestingResults() {
                             )
                         })}
                     </DataTable>
-                    <button className="rounded-full px-6 py-3 font-semibold text-white text-sm mt-4 bg-[#30303c] w-1/3 self-end" onClick={() => setIsOpen(true)}>CONFIRM</button>
+                    <button className="rounded-full px-6 py-3 font-semibold text-white text-sm mt-4 bg-primary w-1/3 self-end" onClick={() => setIsOpen(true)}>CONFIRM</button>
                 </div>
                 <CabinetsWithShelfButtons selectedCabinet={selectedCabinet} ></CabinetsWithShelfButtons>
             </div>
