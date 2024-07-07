@@ -8,12 +8,12 @@ export default function CabinentArrangement() {
 
     const context = [
         { id: 0, img: "/3-shelves.png", text: "1 Door - 3 shelves", zoom: "/3-shelves.png" },
-        { id: 1, img: "/4-shelves.png", text: "1 Door - 4 shelves", zoom: "/4-shelves.png" },
+        { id: 1, img: "/4-shelves-2.png", text: "1 Door - 4 shelves", zoom: "/4-shelves-2.png" },
         { id: 2, img: "/4-shelves-2-door.png", text: "2 Door - 4 shelves", zoom: "/4-shelves-2-door.png" },
         { id: 3, img: "/6-shelves.png", text: "2 Door - 6 shelves", zoom: "/zoom-6-shelves.png" },
         { id: 4, img: "/7-shelves.png", text: "2 Door - 7 shelves", zoom: "/7-shelves.png" },
         { id: 5, img: "/7-shelves-2-door.png", text: "2 Door - 7 shelves", zoom: "/7-shelves-2-door.png" },
-        { id: 6, img: "/8-shelves.png", text: "2 Door - 8 shelves", zoom: "/8-shelves.png" }
+        { id: 6, img: "/8-shelves-2.png", text: "2 Door - 8 shelves", zoom: "/8-shelves-2.png" }
     ];
 
     const handleClickCard = (item) => {
