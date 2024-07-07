@@ -2,7 +2,7 @@ import { useContext } from "react"
 import { StepControllerContext } from "../../context/StepControllerContext"
 import { Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
 import Image from "next/image"
-import PrimaryButton from "./PrimaryButton"
+import PrimaryButton from "../button/PrimaryButton"
 
 
 export default function CameraTesting() {
@@ -36,7 +36,7 @@ export default function CameraTesting() {
                                     text={"REPORT"}
                                 />
                                 <PrimaryButton
-                                    className="bg-[#30303c] text-white w-full"
+                                    className="bg-primary text-white w-full"
                                     onClick={close}
                                     text={"CONFIRM"}
                                 />

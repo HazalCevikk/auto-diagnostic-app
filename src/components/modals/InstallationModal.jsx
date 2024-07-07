@@ -2,7 +2,7 @@ import { useContext, useState, useEffect } from "react"
 import { StepControllerContext } from "../../context/StepControllerContext"
 import { Button, Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
 import Image from "next/image"
-import PrimaryButton from "./PrimaryButton"
+import PrimaryButton from "../button/PrimaryButton"
 
 
 export default function InstallationModal() {
@@ -39,7 +39,7 @@ export default function InstallationModal() {
               </DialogTitle>
               <p>Install the shelf in the following position</p>
               <Image src={"/blue-screen.png"} alt="blueScreen" width={400} height={300} />
-              <div className="border-[1px] border-[#ACABB1] rounded-xl p-6 flex flex-col items-center justify-center space-y-2 w-full mb-4">
+              <div className="border-[1px] border-secondary rounded-xl p-6 flex flex-col items-center justify-center space-y-2 w-full mb-4">
                 {loading ? <>
                   <p className="font-bold">Waiting for shelf being detected</p>
                   <Image src={"/spinning-circle.gif"} alt="Loading..." width={50} height={50} />
@@ -53,7 +53,7 @@ export default function InstallationModal() {
 
               </div>
               <PrimaryButton
-                className={loading ? "bg-[#ACABB1] text-white" : "bg-[#30303c] text-white"}
+                className={loading ? "bg-secondary text-white" : "bg-primary text-white"}
                 text={"CONFIRM INSTALLATION"}
                 onClick={close}
                 disabled={loading} />
